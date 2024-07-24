@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Task</title>
+    <style>
+        html body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        .box {
+            background-color: rgb(187, 243, 243);
+            height: 45px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        #btn {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(247, 247, 247);
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #btn:hover {
+            color: white;
+            background-color: black;
+        }
+        
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin-top: 100px;
+            /* margin-left: 350px; */
+            visibility: hidden;
+        }
+
+        .box1 {
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button#login {
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(187, 236, 236);
+            color: black;
+            cursor: pointer;
+        }
+
+        button#login:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h4>Js Task</h4>
+        <h4>Home</h4>
+        <h4>About</h4>
+        <a href="#" id="btn">Login</a>
+    </div>
+    <div id="container">
+        <div class="box1">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <input type="email" name="email" id="email" placeholder="Enter Your Email">
+            <button id="login">Login</button>
+        </div>
+    </div>
+    <script>
+        // Toggle visibility of the container
+        document.getElementById('btn').addEventListener('click', function() {
+            const container = document.getElementById('container');
+            if (container.style.visibility === 'visible') {
+                container.style.visibility = 'hidden';
+            } else {
+                container.style.visibility = 'visible';
+            }
+        });
+
+        // Handle the login and logout functionality
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const loginBtn = document.getElementById('login');
+        const toggleBtn = document.getElementById('btn');
+
+        loginBtn.addEventListener('click', () => {
+            if (loginBtn.innerHTML === 'Login') {
+                localStorage.setItem('name', nameInput.value);
+                localStorage.setItem('email', emailInput.value);
+                loginBtn.innerHTML = 'Logout';
+                toggleBtn.innerHTML = 'Logout';
+            } else {
+                localStorage.removeItem('name');
+                localStorage.removeItem('email');
+                nameInput.value = '';
+                emailInput.value = '';
+                loginBtn.innerHTML = 'Login';
+                toggleBtn.innerHTML = 'Login';
+            }
+        });
+
+        toggleBtn.addEventListener('click', () => {
+            if (toggleBtn.innerHTML === 'Logout') {
+                localStorage.removeItem('name');
+                localStorage.removeItem('email');
+                nameInput.value = '';
+                emailInput.value = '';
+                loginBtn.innerHTML = 'Login';
+                toggleBtn.innerHTML = 'Login';
+            }
+        });
+    </script>
+</body>
+
+</html>
