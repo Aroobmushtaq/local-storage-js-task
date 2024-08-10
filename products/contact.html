@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+    <nav>
+        <div class="left-nav">
+            <h1>Task</h1>
+        </div>
+        <div class="nav-content">
+            <div class="right-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="buttons-container">
+                <button id="login"><a href="./form.html">Login</a></button>
+                <button id="logout" onclick="logout_fun()">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+        <form action="" method="POST">
+            <h3>Say Something!</h3>
+            <input type="text" name="name" require placeholder="Enter Your Name" class="box">
+            <input type="email" name="email" require placeholder="Enter Your Email" class="box">
+            <input type="number" name="number" require placeholder="Enter Your Number" class="box">
+            <textarea name="message" class="box" placeholder="Enter Your Message" cols="30" rows="10"></textarea>
+            <!-- <input type="submit" value="send message" name="send" class="btnn"> -->
+             <a href="./send.html" class="btnn">Send Message</a>
+        </form>
+    <!-- <div class="last"> -->
+    <div class="end">
+        <div class="footerclass">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="../index.html">Home</a>
+                    <a href="./products.html">Products</a>
+                    <a href="./contact.html">Contact</a>
+                </div>
+                <div class="box">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +123-456-7890</p>
+                    <p><i class="fas fa-phone"></i> +111-222-333</p>
+                    <p><i class="fas fa-envelope"></i> aroob@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Faisalabad, pakistan</p>
+                </div>
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+                    <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                    <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

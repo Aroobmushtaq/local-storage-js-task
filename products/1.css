@@ -1,0 +1,75 @@
+
+/* General form styling */
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* Heading styling */
+form h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Input fields styling */
+form .box {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state styling for inputs */
+form .box:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button styling */
+form .btnn {
+    background-color: #00cccc;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto 0 auto; /* Center the button */
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+form .btnn:hover {
+    background-color: #3385ff;
+}
+
+/* Responsive styling */
+@media (max-width: 500px) {
+    form {
+        padding: 20px;
+    }
+
+    form h3 {
+        font-size: 20px;
+    }
+
+    form .btnn {
+        font-size: 16px;
+    }
+}

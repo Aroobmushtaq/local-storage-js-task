@@ -1,0 +1,23 @@
+/* Ensure the body takes up the full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: #f0f0f0; /* Optional: background color */
+}
+
+/* Styling for the message container */
+.send {
+    text-align: center; /* Center text inside the div */
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333; /* Text color */
+}
